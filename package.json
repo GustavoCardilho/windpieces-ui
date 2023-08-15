@@ -1,7 +1,7 @@
 {
     "name": "windpieces-ui",
     "description": "",
-    "version": "0.0.1",
+    "version": "0.0.0",
     "license": "MIT",
     "main": "./lib/index.js",
     "types": "./lib/index.d.ts",
@@ -22,6 +22,15 @@
         "switch",
         "radio-button"
     ],
+    "author": "Gustavo Rafael Cardilho",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Kyoudan/windpieces-ui"
+    },
+    "bugs": {
+        "url": "https://github.com/Kyoudan/windpieces-ui"
+    },
+    "homepage": "https://github.com/Kyoudan/windpieces-ui",
     "scripts": {
         "build": "rollup -c",
         "dev": "rollup -c -w",
