@@ -14,7 +14,7 @@ export interface IWPRootComponent {
 }
 
 const root = tv({
-  base: "min-w-[60px] flex flex-row items-center justify-center font-medium text-black bg-primary rounded active:opacity-80 transition-all py-1 px-3",
+  base: "min-w-[60px] flex flex-row items-center justify-center font-medium text-white bg-primary rounded active:opacity-80 transition-all py-1 px-3",
   variants: {
     disabled: {
       true: "cursor-not-allowed opacity-50",
@@ -72,9 +72,7 @@ export function WPRootComponent({
   ...props
 }: IWPRootComponent) {
   return (
-    <button
-      className={root({ disabled, size, width })}
-    >
+    <button className={root({ disabled, size, width })}>
       {!loading ? (
         children
       ) : (
