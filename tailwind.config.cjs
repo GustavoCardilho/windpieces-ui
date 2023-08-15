@@ -1,4 +1,4 @@
-const { withTV } = require('tailwind-variants/transformer')
+const { withTV } = require("tailwind-variants/transformer");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = withTV({
@@ -8,7 +8,11 @@ module.exports = withTV({
         "./src/*.{html,js,ts,jsx,tsx}",
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                primary: "#6ACBB7",
+            },
+        },
     },
     plugins: [],
 });
