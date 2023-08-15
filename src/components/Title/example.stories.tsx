@@ -48,12 +48,7 @@ const meta: Meta<typeof WPTitle> = {
             type: { name: "string", required: false },
             description: "Classe do input, para estilização externa",
         },
-        color: {
-            name: "color",
-            defaultValue: "black",
-            type: { name: "string", required: false },
-            description: "Cor do texto",
-        },
+
     },
 };
 

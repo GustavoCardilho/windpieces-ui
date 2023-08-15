@@ -8,16 +8,11 @@ export interface IWPTitleProps {
     bold?: "light" | "normal" | "semibold" | "bold" | "800" | "900";
     size?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
     className?: string;
-    color?: "primary" | "secondary";
 }
 
-const button = tv({
-    base: "font-medium bg-blue-500 text-white active:opacity-80",
+const title = tv({
+    base: "font-medium text-black",
     variants: {
-        color: {
-            primary: "bg-blue-500 text-white",
-            secondary: "bg-purple-500 text-white",
-        },
         size: {
             xs: "px-2 py-1 text-xs",
             sm: "text-sm",
@@ -25,6 +20,14 @@ const button = tv({
             lg: "px-4 py-3 text-lg",
             xl: "px-6 py-4 text-xl",
             "2xl": "px-8 py-5 text-2xl",
+        },
+        bold: {
+            light: "font-light",
+            normal: "font-normal",
+            semibold: "font-semibold",
+            bold: "font-bold",
+            "800": "font-extrabold",
+            "900": "font-black",
         },
     },
     compoundVariants: [
@@ -43,7 +46,6 @@ export function WPTitle({
     size = "md",
     bold = "bold",
     className = "",
-    color = "secondary",
     ...props
 }: IWPTitleProps) {
     const Comp = asChild ? Slot : "h3";
@@ -52,7 +54,7 @@ export function WPTitle({
         <>
             <Comp
                 data-test-id={props.testid}
-                className={button({ color, size })}
+                className={title({ size, bold })}
                 {...props}
             />
         </>
