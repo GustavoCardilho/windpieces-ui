@@ -6,12 +6,6 @@ const meta: Meta<typeof WPButton.Root> = {
   title: "Text/WPButtonComponent",
   tags: ["autodocs"],
   argTypes: {
-    testid: {
-      name: "testid",
-      defaultValue: "title",
-      type: { name: "string", required: true },
-      description: "Id para testes",
-    },
     children: {
       name: "children",
       defaultValue: null,
@@ -74,7 +68,7 @@ export const Example: Story = {
   render: (args) => (
     <>
       <WPButton.Root {...args}>
-        <WPButton.Icon testid="a">
+        <WPButton.Icon>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -90,7 +84,7 @@ export const Example: Story = {
             <path d="m9 18 6-6-6-6" />
           </svg>
         </WPButton.Icon>
-        <WPButton.Text testid="a">Clique aqui</WPButton.Text>
+        <WPButton.Text>Clique aqui</WPButton.Text>
       </WPButton.Root>
     </>
   ),

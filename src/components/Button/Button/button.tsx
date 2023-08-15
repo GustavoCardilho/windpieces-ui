@@ -2,7 +2,6 @@ import { Slot } from "@radix-ui/react-slot";
 import { tv } from "tailwind-variants";
 
 export interface IWPTextProps {
-  testid: string;
   children: React.ReactNode;
   asChild?: boolean;
   bold?: "light" | "normal" | "semibold" | "bold" | "800" | "900";
@@ -51,11 +50,7 @@ export function WPTextComponent({
 }: IWPTextProps) {
   return (
     <>
-      <p
-        data-test-id={props.testid}
-        className={button({ size, bold })}
-        {...props}
-      >
+      <p className={button({ size, bold })} {...props}>
         {" "}
         {children}
       </p>

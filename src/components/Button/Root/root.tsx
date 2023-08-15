@@ -2,7 +2,6 @@ import { Slot } from "@radix-ui/react-slot";
 import { tv } from "tailwind-variants";
 
 export interface IWPRootComponent {
-  testid: string;
   children: React.ReactNode;
   asChild?: boolean;
   bold?: "light" | "normal" | "semibold" | "bold" | "800" | "900";
@@ -11,7 +10,7 @@ export interface IWPRootComponent {
   disabled?: boolean;
   loading?: boolean;
   loadingSize?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
-  width: "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
+  width?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
 }
 
 const root = tv({
@@ -74,7 +73,6 @@ export function WPRootComponent({
 }: IWPRootComponent) {
   return (
     <button
-      data-test-id={props.testid}
       className={root({ disabled, size, width })}
     >
       {!loading ? (

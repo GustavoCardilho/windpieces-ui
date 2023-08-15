@@ -1,14 +1,14 @@
 import { Slot } from "@radix-ui/react-slot";
+import { ElementType } from "react";
 import { tv } from "tailwind-variants";
 
 export interface IWPIconProps {
-  testid: string;
   children: React.ReactNode;
   className?: string;
   asChild?: boolean;
 }
 
-const icon = tv({
+const iconClass = tv({
   base: "text-white",
   defaultVariants: {
     size: "md",
@@ -17,15 +17,13 @@ const icon = tv({
 
 export function WPIconComponent({
   asChild = false,
-
-  className = "",
-  ...props
-}: IWPIconProps) {
+  children,
+}: IWPIconProps & ElementType) {
   const Comp = asChild ? Slot : "h3";
 
   return (
     <>
-      <Comp data-test-id={props.testid} className={icon()} {...props} />
+      <Comp className={iconClass()} children={children}></Comp>
     </>
   );
 }
