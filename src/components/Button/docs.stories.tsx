@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { WPButton } from "./index";
 
-const meta: Meta<typeof WPButton.Root> = {
-  component: WPButton.Root,
+const meta: Meta<typeof WPButton> = {
+  component: WPButton,
   title: "Text/WPButtonComponent",
   tags: ["autodocs"],
   argTypes: {
@@ -59,7 +59,7 @@ const meta: Meta<typeof WPButton.Root> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof WPButton.Root>;
+type Story = StoryObj<typeof WPButton>;
 
 export const Example: Story = {
   args: {
@@ -67,25 +67,23 @@ export const Example: Story = {
   },
   render: (args) => (
     <>
-      <WPButton.Root {...args}>
-        <WPButton.Icon>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            className="lucide lucide-chevron-right"
-          >
-            <path d="m9 18 6-6-6-6" />
-          </svg>
-        </WPButton.Icon>
-        <WPButton.Text>Clique aqui</WPButton.Text>
-      </WPButton.Root>
+      <WPButton {...args}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          className="lucide lucide-chevron-right"
+        >
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+        <p>clique aqui</p>
+      </WPButton>
     </>
   ),
 };
