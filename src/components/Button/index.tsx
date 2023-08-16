@@ -71,6 +71,8 @@ export function WPButton({
   width = "md",
   ...props
 }: IWPRootComponent & ButtonHTMLAttributes<HTMLButtonElement>) {
+  console.log({ ...props });
+
   return (
     <button className={root({ disabled, size, width })} {...props}>
       {!loading ? (
