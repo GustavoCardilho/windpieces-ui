@@ -72,7 +72,7 @@ export function WPButton({
   ...props
 }: IWPRootComponent & ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
-    <button className={root({ disabled, size, width })}>
+    <button className={root({ disabled, size, width })} {...props}>
       {!loading ? (
         children
       ) : (
