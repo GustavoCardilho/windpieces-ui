@@ -1,3 +1,4 @@
+import { ButtonHTMLAttributes } from "react";
 import { tv } from "tailwind-variants";
 
 export interface IWPRootComponent {
@@ -69,7 +70,7 @@ export function WPButton({
   size = "md",
   width = "md",
   ...props
-}: IWPRootComponent) {
+}: IWPRootComponent & ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
     <button className={root({ disabled, size, width })}>
       {!loading ? (
